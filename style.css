@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    transition: transform 2s;
+}
+
+.fullbox{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.red{
+background-color: red;
+transform-origin: top left;
+}
+.blue{
+    background-color: blue;
+    transform-origin: top right;
+}
+.yellow{
+    background-color: yellow;
+    transform-origin: bottom left;
+}
+.green{
+    background-color: green;
+    transform-origin: bottom right;
+}
+h1{
+    position: absolute;
+    z-index: -1;
+}
+
+.fullbox:hover .red, .fullbox:hover .green{
+    transform: rotate(90deg);
+}
+.fullbox:hover .blue, .fullbox:hover .yellow{
+    transform: rotate(-90deg);
+}
